@@ -11,7 +11,7 @@
 
 - Faculty arithmetic
 
-    $$ n! = 1*2*3*4 ... n = \prod_{k=1}^n{k} $$ 
+    $$n! = 1*2*3*4 ... n = \prod_{k=1}^n{k}$$ 
     
 <br>
 
