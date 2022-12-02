@@ -62,7 +62,8 @@ $$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
 
 <br>
 
-   - Entity ```ej_row```
+- **Attributes** - Furder describe an entity
+  - Entity ```ej_row```
 
 <style>
     table {
@@ -88,6 +89,8 @@ $$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
         </tr>
     </body>
 </table>
+
+<br>
 
 - **Relationships** - Association among 2 or more entities
 
