@@ -19,7 +19,7 @@
 - **Attributes** - Furder describe an entity
 Entity ```ej_draws```
 
-<style scoped>
+<style>
     table {
         font-size: 12px;
     }
