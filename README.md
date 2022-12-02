@@ -18,8 +18,8 @@ $$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
 ## Data Models Development
 
 - **Entities** - Represent real world object or concept
-  - Euro Jackpot Draws ```{ data_base_name: "ej_draws", API_name: "EuroJackpotDraws" }```
-  - All Euro Jackpot Rows ```{ data_base_name: "ej_all_rows", API_name: "EuroJackpotAllRows" }```
+  - Euro Jackpot Draws ```{ data_base_name: "ej_draw", API_name: "EuroJackpotDraw" }```
+  - All Euro Jackpot Rows ```{ data_base_name: "ej_row", API_name: "EuroJackpotRow" }```
   <br>
 
   - 6 from 49 Draws ```{ ... }```
@@ -33,7 +33,7 @@ $$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
 
 
 - **Attributes** - Furder describe an entity
-Entity ```ej_draws```
+Entity ```ej_draw```
 
 <style>
     table {
@@ -64,7 +64,8 @@ Entity ```ej_draws```
 
 - **Relationships** - Association among 2 or more entities
 
-```ej_draws``` - none yet
+```ej_draw``` - none yet
+![Euro Jackpot DB](assets/images/documentation/er-diagram.drawio.svg)
 
 <br><br>
 ## Data Definition for MySQL and PostgreSQL
