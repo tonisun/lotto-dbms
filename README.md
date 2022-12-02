@@ -41,6 +41,7 @@ Entity ```ej_draws```
 <br>
 
 - **Relationships** - Association among 2 or more entities
+
 ```ej_draws``` - none yet
 
 <br><br>
