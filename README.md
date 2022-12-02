@@ -5,11 +5,15 @@
 
 - Binomial coefficient
 
-    $$ \binom{n}{k} = \frac{n!}{k! * ( n - k )!}  $$ <br>
+    $$ \binom{n}{k} = \frac{n!}{k! * ( n - k )!}  $$ 
+
+<br>
 
 - Faculty arithmetic
 
-    $$ n! = 1*2*3*4 ... n = \prod_{k=1}^n{k} $$ <br>
+    $$ n! = 1*2*3*4 ... n = \prod_{k=1}^n{k} $$ 
+    
+<br>
 
 - EuroJackpot [Kaggle => 5 from 50](https://www.kaggle.com/code/tonisun/5from50)
 
