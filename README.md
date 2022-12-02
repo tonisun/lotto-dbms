@@ -1,9 +1,11 @@
 # Lotto - Database Management System
 ![Logo egosanto.de](assets/images/documentation/logo.png)
 <br><br>
-## Data Description on `kaggle.com`
+## Data Description on `kaggle.com`#
+
 - Binomial coefficient
     $$ \binom{n}{k} = \frac{n!}{k! * ( n - k )!}  $$ <br>
+
 - Faculty arithmetic
     $$ n! = 1*2*3*4 ... n = \prod_{k=1}^n{k} $$ <br>
 
