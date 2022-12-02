@@ -19,7 +19,13 @@
 - **Attributes** - Furder describe an entity
 Entity ```ej_draws```
 
-<table>
+<style scoped>
+    table {
+        font-size: 12px;
+    }
+</style>
+
+<table >
     <header>
         <tr>
             <th>fields: </th><th>date</th><th>n1</th><th>n2</th><th>n3</th><th>n4</th><th>n5</th><th>en1</th><th>en2</th>
@@ -37,7 +43,7 @@ Entity ```ej_draws```
         </tr>
     </body>
 </table>
-
+</font>
 <br>
 
 - **Relationships** - Association among 2 or more entities
