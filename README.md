@@ -6,10 +6,11 @@
   - Euro Jackpot Draws ```{ data_base_name: "ej_draws", API_name: "EuroJackpotDraws" }```
   - All Euro Jackpot Rows ```{ data_base_name: "ej_all_rows", API_name: "EuroJackpotAllRows" }```
   <br>
-  
+
   - 6 from 49 Draws ```{ ... }```
   - All 6 from 49 Rows ```{ ... }```
   <br>
+  
   - ... ```{ ... }```
 <br><br>
 
