@@ -1,6 +1,7 @@
 -- Database `ej_lotto`
 CREATE DATABASE IF NOT EXISTS `ej_lotto`;
 USE `ej_lotto`;
+
 -- Table `ej_draw`
 DROP TABLE IF EXISTS `ej_draw`;
 CREATE TABLE `ej_draw` (
@@ -14,6 +15,7 @@ CREATE TABLE `ej_draw` (
     `en2` int(2) NOT NULL,
     PRIMARY KEY (`date`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf -8;
+
 -- Table `ej_row`
 DROP TABLE IF EXISTS `ej_row`;
 CREATE TABLE `ej_row` (
