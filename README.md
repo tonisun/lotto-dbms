@@ -30,7 +30,6 @@ Entity ```ej_draws```
     }
 </style>
 
-<font size="6">
 <table >
     <header>
         <tr>
@@ -49,7 +48,7 @@ Entity ```ej_draws```
         </tr>
     </body>
 </table>
-</font>
+
 <br>
 
 - **Relationships** - Association among 2 or more entities
