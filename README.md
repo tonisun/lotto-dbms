@@ -64,7 +64,9 @@ Entity ```ej_draw```
 
 - **Relationships** - Association among 2 or more entities
 
-```ej_draw``` - none yet
+  - ```ej_draw``` - none yet
+  - ```ej_row``` - none yet
+  
 ![Euro Jackpot DB](assets/images/documentation/er-diagram.drawio.svg)
 
 <br><br>
