@@ -6,6 +6,7 @@
   - Euro Jackpot Draws ```{ data_base_name: "ej_draws", API_name: "EuroJackpotDraws" }```
   - All Euro Jackpot Rows ```{ data_base_name: "ej_all_rows", API_name: "EuroJackpotAllRows" }```
   <br>
+  
   - 6 from 49 Draws ```{ ... }```
   - All 6 from 49 Rows ```{ ... }```
   <br>
@@ -14,6 +15,7 @@
 
 - **Attributes** - Furder describe an entity
 ```ej_draws```
+<table>
 |   fields:   | date | n1  | n2  | n3  | n4  | n5 | en1 | en2 | 
 |:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
 | types: | date or varchar(10) | integer(2) | integer(2) | integer(2) | integer(2) | integer(2) | integer(2) | integer(2) |
