@@ -6,13 +6,13 @@
 
 $$ \binom{50}{5} = 2.118.760$$
 
-- Euro Jackpot + Euro Number
+- Euro Jackpot * 2 EuroNumbers(1..12)
 
-$$ \binom{50}{5} + 2 EuroNumbers(1..12) = 2.118.760 * 24 = 50.850.240$$
+$$ \binom{50}{5} * \binom{12}{2} = 2.118.760 * 24 = 50.850.240$$
 
-- 6 from 49 + SuperZahl  
+- 6 from 49 * 1 SuperZahl(0..9)  
 
-$$ \binom{49}{6} + 1 SuperZahl(0..9) = 13.983.816  *  10 = 139.838.160 $$
+$$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
 
 <br><br>
 ## Data Models Development
