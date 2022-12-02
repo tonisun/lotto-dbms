@@ -16,6 +16,12 @@
 
 <br>
 
+$$
+f(x) = \int_{-\infty}^\infty
+	\hat f(\xi)\,e^{2 \pi i \xi x}
+	\,d\xi
+$$
+
 - **Attributes** - Furder describe an entity
 Entity ```ej_draws```
 
@@ -25,6 +31,7 @@ Entity ```ej_draws```
     }
 </style>
 
+<font size="6">
 <table >
     <header>
         <tr>
