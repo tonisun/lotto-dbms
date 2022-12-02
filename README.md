@@ -3,13 +3,17 @@
 <br><br>
 ## Data Description on `kaggle.com`
 - EuroJackpot [Kaggle => 5 from 50](https://www.kaggle.com/code/tonisun/5from50)
+
 $$ \binom{50}{5} = 2.118.760$$
 
 - Euro Jackpot + Euro Number
+
 $$ \binom{50}{5} + 2 EuroNumbers(1..12) = 2.118.760 * 24 = 50.850.240$$
 
 - 6 from 49 + SuperZahl  
+
 $$ \binom{49}{6} + 1 SuperZahl(0..9) = 13.983.816  *  10 = 139.838.160 $$
+
 <br><br>
 ## Data Models Development
 
