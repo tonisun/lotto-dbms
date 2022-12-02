@@ -101,3 +101,9 @@ $$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
 
 <br><br>
 ## Data Definition for MySQL and PostgreSQL
+
+### Create Admin User & Database `ej_lotto` on MySQL Server
+
+With the same database name `ej_lotto`, user name `ej_lotto` and password `ej_lotto` on test server
+
+```ej_lotto_001.sql```
