@@ -1,6 +1,9 @@
 # Lotto - Database Management System
 ![Logo egosanto.de](assets/images/documentation/logo.png)
 <br><br>
+## Data Description on `kaggle.com`
+[5 from 50](https://www.kaggle.com/code/tonisun/5from50)
+<br><br>
 ## Data Models Development
 
 - **Entities** - Represent real world object or concept
@@ -16,11 +19,7 @@
 
 <br>
 
-$$
-f(x) = \int_{-\infty}^\infty
-	\hat f(\xi)\,e^{2 \pi i \xi x}
-	\,d\xi
-$$
+
 
 - **Attributes** - Furder describe an entity
 Entity ```ej_draws```
