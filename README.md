@@ -1,5 +1,6 @@
 # Lotto - Database Management System
 ![Logo egosanto.de](assets/images/documentation/logo.png)
+<br><br>
 ## Data Models Development
 
 - **Entities** - Represent real world object or concept
@@ -12,7 +13,8 @@
   <br>
   
   - ... ```{ ... }```
-<br><br>
+
+<br>
 
 - **Attributes** - Furder describe an entity
 Entity ```ej_draws```
@@ -36,14 +38,10 @@ Entity ```ej_draws```
     </body>
 </table>
 
-|   fields:   | date | n1  | n2  | n3  | n4  | n5 | en1 | en2 | 
-|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| types: | date or varchar(10) | integer(2) | integer(2) | integer(2) | integer(2) | integer(2) | integer(2) | integer(2) |
-| : |  |  | unique {n1..n5} | unique {n1..n5} | unique {n1..n5} | unique {n1..n5} | unique {en1, en2} | unique {en1, en2} |
-| desc: | "YYYY-MM-DD" | {1..50} | {1..50} | {1..50} | {1..50} | {1..50} | {1..12} | {1..12} |
-<br><br>
+<br>
 
 - **Relationships** - Association among 2 or more entities
 ```ej_draws``` - none yet
 
+<br><br>
 ## Data Definition for MySQL and PostgreSQL
