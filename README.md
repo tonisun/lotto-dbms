@@ -64,6 +64,11 @@ $$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
 
 - **Attributes** - Furder describe an entity
   - Entity ```ej_row```
+    - unique{ n1 < n2 < n3 < n4 < n5 }
+    - each row is unique
+    - from (1, 2, 3, 4, 5) to (46, 47, 48, 49, 50)
+    - each row have unique `row_id`, as unique identification in relations with other entities
+
 
 <style>
     table {
@@ -74,18 +79,18 @@ $$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
 <table >
     <header>
         <tr>
-            <th>fields: </th><th>id</th><th>n1</th><th>n2</th><th>n3</th><th>n4</th><th>n5</th><th>en1</th><th>en2</th>
+            <th>fields: </th><th>id</th><th>n1</th><th>n2</th><th>n3</th><th>n4</th><th>n5</th>
         </tr>
     </header>
     <body>
          <tr>
-            <th>types: </th><td>integer(7)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td>
+            <th>types: </th><td>integer(7)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td>
         </tr>
         <tr>
-            <th>constraints: </th><td>Primary Key<br> unique <br>{1..2118760}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {en1, en2}</td><td>unique {en1, en2}</td>
+            <th>constraints: </th><td>Primary Key<br> unique <br>{1..2118760}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td>
         </tr>
         <tr>
-            <th>desc: </th><td>{1..2118760}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..12}</td><td>{1..12}</td>
+            <th>desc: </th><td>{1..2118760}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td>
         </tr>
     </body>
 </table>
@@ -104,6 +109,13 @@ $$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
 
 ### Create Admin User & Database `ej_lotto` on MySQL Server
 
-With the same database name `ej_lotto`, user name `ej_lotto` and password `ej_lotto` on test server
+With the same database name `ej_lotto`, user name `ej_lotto` and password `ej_lotto` on test server ;-)
 
-```ej_lotto_001.sql```
+```shell 
+mysql_ej_lotto_001.sql
+```
+
+```SQL
+CREATE DATABASE  IF NOT EXISTS `ej_lotto` ;
+USE `ej_lotto`;
+```
