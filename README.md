@@ -186,41 +186,73 @@ pgsql_ej_lotto_001.sql
 ```
 
 ```SQL
--- Database `ej_lotto`
-CREATE DATABASE IF NOT EXISTS `ej_lotto`;
-USE `ej_lotto`;
+-- Role: ej_lotto
+-- DROP ROLE IF EXISTS ej_lotto;
 
--- Table `ej_draw`
-DROP TABLE IF EXISTS `ej_draw`;
-CREATE TABLE `ej_draw` (
-    `date` date NOT NULL,
-    `n1` int(2) NOT NULL,
-    `n2` int(2) NOT NULL,
-    `n3` int(2) NOT NULL,
-    `n4` int(2) NOT NULL,
-    `n5` int(2) NOT NULL,
-    `en1` int(2) NOT NULL,
-    `en2` int(2) NOT NULL,
-    PRIMARY KEY (`date`)
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+CREATE ROLE ej_lotto WITH
+  LOGIN
+  NOSUPERUSER
+  INHERIT
+  CREATEDB
+  NOCREATEROLE
+  NOREPLICATION
+  ENCRYPTED PASSWORD 'SCRAM-SHA-256$4096:sP+kNtYPyOvs77EOZvGHhA==$Xr8RDnLe0xCrlikHwMe4auwoh681tvfJLOqEsxgHy4I=:crXTLQ59j7V1Q2GYch9Kgee6SishRkV7PASgHJwNN1w=';
 
--- INSERT Test
-INSERT INTO `ej_draw` (`date`, `n1`, `n2`, `n3`, `n4`, `n5`, `en1`, `en2`) VALUES 
-(now(), 1, 2, 3, 4, 5, 12, 11);
+-- Database: ej_lotto
+
+-- DROP DATABASE IF EXISTS ej_lotto;
+
+CREATE DATABASE ej_lotto
+    WITH 
+    OWNER = ej_lotto
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'German_Germany.1252'
+    LC_CTYPE = 'German_Germany.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1;
+
+
+-- Table: public.ej_draw
+
+-- DROP TABLE IF EXISTS public.ej_draw;
+
+CREATE TABLE IF NOT EXISTS public.ej_draw
+(
+    date date NOT NULL,
+    n1 integer NOT NULL,
+    n2 integer NOT NULL,
+    n3 integer NOT NULL,
+    n4 integer NOT NULL,
+    n5 integer NOT NULL,
+    en1 integer NOT NULL,
+    en2 integer NOT NULL,
+    CONSTRAINT ej_draw_pkey PRIMARY KEY (date)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.ej_draw
+    OWNER to ej_lotto;
 
 
 
+-- Table: public.ej_row
 
+-- DROP TABLE IF EXISTS public.ej_row;
 
--- Table `ej_row`
-DROP TABLE IF EXISTS `ej_row`;
-CREATE TABLE `ej_row` (
-    `row_id` int(7) NOT NULL AUTO_INCREMENT,
-    `n1` int(2) NOT NULL,
-    `n2` int(2) NOT NULL,
-    `n3` int(2) NOT NULL,
-    `n4` int(2) NOT NULL,
-    `n5` int(2) NOT NULL,
-    PRIMARY KEY (`row_id`)
-) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4;
+CREATE TABLE IF NOT EXISTS public.ej_row
+(
+    row_id integer NOT NULL DEFAULT nextval('ej_row_row_id_seq'::regclass),
+    n1 integer NOT NULL,
+    n2 integer NOT NULL,
+    n3 integer NOT NULL,
+    n4 integer NOT NULL,
+    n5 integer NOT NULL,
+    CONSTRAINT ej_row_pkey PRIMARY KEY (row_id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public.ej_row
+    OWNER to ej_lotto;
 ```
