@@ -1,7 +1,7 @@
 # Lotto - Database Management System
 ![Logo egosanto.de](assets/images/documentation/logo.png)
 <br><br>
-## Data Description on `kaggle.com`#
+## Data Description on `kaggle.com`
 
 - Binomial coefficient
 
