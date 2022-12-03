@@ -80,7 +80,7 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
             <th>constraints </th><td>Primary Key<br> unique <br>{ date..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { en1, en2 }</td><td>unique { en1, en2 }</td>
         </tr>
         <tr>
-            <th>desc </th><td>"YYYY-MM-DD"</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..12 }</td><td>{ 1..12 }</td>
+            <th>desc </th><td>YYYY-MM-DD</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..12 }</td><td>{ 1..12 }</td>
         </tr>
     </body>
 </table>
