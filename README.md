@@ -77,10 +77,10 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
             <th>types </th><td>date or <br>varchar(10)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td>
         </tr>
         <tr>
-            <th>constraints </th><td>Primary Key<br> unique <br>{date..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {en1, en2}</td><td>unique {en1, en2}</td>
+            <th>constraints </th><td>Primary Key<br> unique <br>{ date..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { en1, en2 }</td><td>unique { en1, en2 }</td>
         </tr>
         <tr>
-            <th>desc </th><td>"YYYY-MM-DD"</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..12}</td><td>{1..12}</td>
+            <th>desc </th><td>"YYYY-MM-DD"</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..12 }</td><td>{ 1..12 }</td>
         </tr>
     </body>
 </table>
@@ -112,10 +112,10 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
             <th>types </th><td>integer(7)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td>
         </tr>
         <tr>
-            <th>constraints </th><td>Primary Key<br> unique <br>{1..2118760}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td><td>unique {n1..n5}</td>
+            <th>constraints </th><td>Primary Key<br> unique <br>{ 1..2118760 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td>
         </tr>
         <tr>
-            <th>desc </th><td>{1..2118760}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td><td>{1..50}</td>
+            <th>desc </th><td>{ 1..2118760 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td>
         </tr>
     </body>
 </table>
