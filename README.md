@@ -5,39 +5,39 @@
 
 - Binomial coefficient
 
-    $$ \binom{n}{k} = \frac{n!}{k! * ( n - k )!}  $$ 
+    $$ \binom{n}{k} = \frac{n!}{k! \cdot ( n - k )!}  $$ 
 
 
 
 - Faculty arithmetic
 
-    $$ n! = 1*2*3*4 ... n = \prod_{k=1}^n{k} $$
+    $$ n! = 1\cdot2\cdot3\cdot4 ... n = \prod_{k=1}^n{k} $$
 
 
 
 - EuroJackpot [Kaggle => 5 from 50](https://www.kaggle.com/code/tonisun/5from50)
 
-$$ \binom{50}{5} = \frac{50!}{5! * ( 50 - 5 )!} = \frac{50!}{5! * 45!} = $$ 
+$$ \binom{50}{5} = \frac{50!}{5! \cdot ( 50 - 5 )!} = \frac{50!}{5! \cdot 45!} = $$ 
 
-$$ = \frac{1*2*3* .. * 50}{1*2*3*4*5  *  1*2*3* .. * 45} = $$
+$$ = \frac{1\cdot2\cdot3\cdot .. \cdot 50}{1\cdot2\cdot3\cdot4\cdot5  \cdot  1\cdot2\cdot3\cdot .. \cdot 45} = $$
 
 $$ = \frac{3,0414093201713378043612608166065e+64}{1,4354666503857623347435579379479e+58} = 2.118.760 $$
 
 <br>
 
-$$ \binom{12}{2} = \frac{12!}{2!*(12-2)!} = \frac{12!}{2! * 10!} = $$
+$$ \binom{12}{2} = \frac{12!}{2!\cdot(12-2)!} = \frac{12!}{2! \cdot 10!} = $$
 
-$$ = \frac{1*2*3*4*5*6*7*8*9*10*11*12}{1*2*1*2*3*4*5*6*7*8*9*10} = $$
+$$ = \frac{1\cdot2\cdot3\cdot4\cdot5\cdot6\cdot7\cdot8\cdot9\cdot10\cdot11\cdot12}{1\cdot2\cdot1\cdot2\cdot3\cdot4\cdot5\cdot6\cdot7\cdot8\cdot9\cdot10} = $$
 
 $$ = \frac{479.001.600}{7.257.600} = 66 $$
 
-- Euro Jackpot * 2 EuroNumbers(1..12)
+- Euro Jackpot \cdot 2 EuroNumbers(1..12)
 
-$$ \binom{50}{5} * \binom{12}{2} = 2.118.760 * 66 = 139.838.160$$
+$$ \binom{50}{5} \cdot \binom{12}{2} = 2.118.760 \cdot 66 = 139.838.160$$
 
-- 6 from 49 * 1 SuperZahl(0..9)  
+- 6 from 49 \cdot 1 SuperZahl(0..9)  
 
-$$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
+$$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 
 <br><br>
 ## Data Models Development
@@ -132,12 +132,57 @@ $$ \binom{49}{6} * \binom{10}{1} = 13.983.816  *  10 = 139.838.160 $$
 <br><br>
 ## Data Definition for MySQL and PostgreSQL
 
-### Create Admin User & Database `ej_lotto` on MySQL Server
+### Create Database `ej_lotto` on MySQL Server
 
 With the same database name `ej_lotto`, user name `ej_lotto` and password `ej_lotto` on test server ;-)
 
 ```shell 
 mysql_ej_lotto_001.sql
+```
+
+```SQL
+-- Database `ej_lotto`
+CREATE DATABASE  IF NOT EXISTS `ej_lotto` ;
+USE `ej_lotto`;
+
+-- Table `ej_draw`
+DROP TABLE IF EXISTS `ej_draw`;
+CREATE TABLE `ej_draw` (
+  `date` date NOT NULL,
+  `n1` int(2) NOT NULL,
+  `n2` int(2) NOT NULL,
+  `n3` int(2) NOT NULL,
+  `n4` int(2) NOT NULL,
+  `n5` int(2) NOT NULL,
+  `en1` int(2) NOT NULL,
+  `en2` int(2) NOT NULL,
+  PRIMARY KEY (`date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- INSERT TEST
+INSERT INTO `ej_draw` (`date`, `n1`, `n2`, `n3`, `n4`, `n5`, `en1`, `en2` VALUES 
+(now(), 1, 2, 3, 4, 5, 12, 11);
+
+-- Table `ej_row`
+DROP TABLE IF EXISTS `ej_row`;
+CREATE TABLE `ej_row` (
+  `row_id` int(7) NOT NULL AUTO_INCREMENT,
+  `n1` int(2) NOT NULL,
+  `n2` int(2) NOT NULL,
+  `n3` int(2) NOT NULL,
+  `n4` int(2) NOT NULL,
+  `n5` int(2) NOT NULL,
+  PRIMARY KEY (`row_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+```
+
+
+### Create Database `ej_lotto` on PostgreSQL Server
+
+With the same database name `ej_lotto`, user name `ej_lotto` and password `ej_lotto` on test server ;-)
+
+```BASH
+pgsql_ej_lotto_001.sql
 ```
 
 ```SQL
