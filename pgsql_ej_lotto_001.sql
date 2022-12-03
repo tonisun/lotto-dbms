@@ -67,3 +67,37 @@ TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public.ej_row
     OWNER to ej_lotto;
+
+
+-- PROCEDURE: public.pr_ej_all_rows()
+
+-- DROP PROCEDURE IF EXISTS public.pr_ej_all_rows();
+
+CREATE OR REPLACE PROCEDURE public.pr_ej_all_rows()
+LANGUAGE 'plpgsql'
+AS $BODY$
+DECLARE
+    aus int;
+	_z1 int;
+	_z2 int;
+	_z3 int;
+	_z4 int;
+	_z5 int;
+  BEGIN
+  	aus := 50;
+	_z1 := 1;
+    FOR _z1 IN 1 .. aus - 4 LOOP
+		FOR _z2 IN _z1 + 1 .. aus - 3 LOOP
+			FOR _z3 IN _z2 + 1 .. aus - 2 LOOP
+				FOR _z4 IN _z3 + 1 .. aus - 1 LOOP
+					FOR _z5 IN _z4 + 1 .. aus LOOP
+						INSERT INTO ej_row (n1, n2, n3, n4, n5) VALUES (_z1, _z2, _z3, _z4, _z5);
+					END LOOP;
+				END LOOP;
+			END LOOP;
+		END LOOP;
+	END LOOP;
+  END;
+$BODY$;
+
+ALTER PROCEDURE public.pr_ej_all_rows() OWNER TO ej_lotto;

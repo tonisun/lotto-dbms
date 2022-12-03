@@ -260,8 +260,7 @@ ALTER TABLE IF EXISTS public.ej_row
 
 -- DROP PROCEDURE IF EXISTS public.pr_ej_all_rows();
 
-CREATE OR REPLACE PROCEDURE public.pr_ej_all_rows(
-	)
+CREATE OR REPLACE PROCEDURE public.pr_ej_all_rows()
 LANGUAGE 'plpgsql'
 AS $BODY$
 DECLARE
@@ -279,7 +278,7 @@ DECLARE
 			FOR _z3 IN _z2 + 1 .. aus - 2 LOOP
 				FOR _z4 IN _z3 + 1 .. aus - 1 LOOP
 					FOR _z5 IN _z4 + 1 .. aus LOOP
-							INSERT INTO ej_row (n1, n2, n3, n4, n5) VALUES (_z1, _z2, _z3, _z4, _z5);
+						INSERT INTO ej_row (n1, n2, n3, n4, n5) VALUES (_z1, _z2, _z3, _z4, _z5);
 					END LOOP;
 				END LOOP;
 			END LOOP;
