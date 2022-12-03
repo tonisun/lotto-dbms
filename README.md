@@ -9,9 +9,9 @@
 
 
 
-- Faculty arithmetic $$ \prod_ {k=1}^n{k}$$
+- Faculty arithmetic 
 
-    $$ n! = 1\cdot2\cdot3\cdot4 ... n = \prod_ {k=1}^n{k} $$
+    $$ n! = 1\cdot2\cdot3\cdot4 ... n = \\prod_ {k=1}^n{k} $$
 
 
 
