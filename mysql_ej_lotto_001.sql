@@ -14,7 +14,15 @@ CREATE TABLE `ej_draw` (
     `en1` int(2) NOT NULL,
     `en2` int(2) NOT NULL,
     PRIMARY KEY (`date`)
-) ENGINE = InnoDB DEFAULT CHARSET = utf -8;
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+
+-- INSERT Test
+INSERT INTO `ej_draw` (`date`, `n1`, `n2`, `n3`, `n4`, `n5`, `en1`, `en2`) VALUES 
+(now(), 1, 2, 3, 4, 5, 12, 11);
+
+
+
+
 
 -- Table `ej_row`
 DROP TABLE IF EXISTS `ej_row`;
@@ -26,4 +34,4 @@ CREATE TABLE `ej_row` (
     `n4` int(2) NOT NULL,
     `n5` int(2) NOT NULL,
     PRIMARY KEY (`row_id`)
-) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf -8;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 DEFAULT CHARSET = utf8mb4;
