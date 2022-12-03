@@ -31,11 +31,11 @@ $$ = \frac{1\cdot2\cdot3\cdot4\cdot5\cdot6\cdot7\cdot8\cdot9\cdot10\cdot11\cdot1
 
 $$ = \frac{479.001.600}{7.257.600} = 66 $$
 
-- Euro Jackpot \cdot 2 EuroNumbers(1..12)
+- Euro Jackpot * 2 EuroNumbers(1..12)
 
 $$ \binom{50}{5} \cdot \binom{12}{2} = 2.118.760 \cdot 66 = 139.838.160$$
 
-- 6 from 49 \cdot 1 SuperZahl(0..9)  
+- 6 from 49 * 1 SuperZahl(0..9)  
 
 $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 
