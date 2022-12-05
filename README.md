@@ -313,7 +313,7 @@ ALTER TABLE IF EXISTS public.ej_row OWNER to ej_lotto;
 -- DROP TABLE IF EXISTS public.en_row;
 
 CREATE TABLE IF NOT EXISTS public.en_row (
-    row_id integer NOT NULL DEFAULT nextval('en_row_row_id_seq'::regclass),
+    row_id SERIAL ,
     n1 integer NOT NULL,
     n2 integer NOT NULL,
     CONSTRAINT en_row_pkey PRIMARY KEY (row_id)

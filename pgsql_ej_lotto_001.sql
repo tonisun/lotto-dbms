@@ -58,6 +58,19 @@ CREATE TABLE IF NOT EXISTS public.ej_row (
 ALTER TABLE IF EXISTS public.ej_row OWNER to ej_lotto;
 
 
+-- Table: public.en_row
+-- DROP TABLE IF EXISTS public.en_row;
+
+CREATE TABLE IF NOT EXISTS public.en_row (
+    row_id SERIAL ,
+    n1 integer NOT NULL,
+    n2 integer NOT NULL,
+    CONSTRAINT en_row_pkey PRIMARY KEY (row_id)
+)
+
+ALTER TABLE IF EXISTS public.en_row OWNER to ej_lotto;
+
+
 -- PROCEDURE: public.pr_ej_all_rows()
 -- DROP PROCEDURE IF EXISTS public.pr_ej_all_rows();
 
@@ -89,3 +102,25 @@ DECLARE
 $BODY$;
 
 ALTER PROCEDURE public.pr_ej_all_rows() OWNER TO ej_lotto;
+
+-- PROCEDURE: public.pr_en_all_rows()
+-- DROP PROCEDURE IF EXISTS public.pr_en_all_rows();
+
+CREATE OR REPLACE PROCEDURE public.pr_en_all_rows()
+LANGUAGE 'plpgsql'
+AS $BODY$
+DECLARE
+    _from int;
+	_n1 int;
+	_n2 int;
+BEGIN
+  	_from := 12;
+	_n1 := 1;
+    FOR _n1 IN 1 .. _from - 1 LOOP
+        FOR _n2 IN _n1 + 1 .. _from LOOP
+            INSERT INTO en_row (n1, n2) VALUES (_n1, _n2);			
+        END LOOP;
+    END LOOP;
+END;
+$BODY$;
+ALTER PROCEDURE public.pr_en_all_rows() OWNER TO ej_lotto;
