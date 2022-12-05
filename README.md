@@ -50,6 +50,7 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 - **Entities** - Represent real world object or concept
   - Euro Jackpot Draws ```{ data_base_name: "ej_draw", API_name: "EuroJackpotDraw" }```
   - All Euro Jackpot Rows ```{ data_base_name: "ej_row", API_name: "EuroJackpotRow" }```
+  - All Euro Number Rows ```{ data_base_name: "en_row", API_name: "EuroNumberRow" }```
   <br>
 
   - 6 from 49 Draws ```{ ... }```
@@ -63,7 +64,7 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 
 
 - **Attributes** - Furder describe an entity
-  - Entity ```ej_draw```
+  - Entity ```ej_draw``` (API Entity Name: `EuroJackpotDraw`)
 
 <style>
     table {
@@ -93,7 +94,7 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 <br>
 
 - **Attributes** - Furder describe an entity
-  - Entity ```ej_row```
+  - Entity ```ej_row``` (API Entity Name: `EuroJackpotRow`)
     - unique{ n1 < n2 < n3 < n4 < n5 }
     - each row is unique
     - from (1, 2, 3, 4, 5) to (46, 47, 48, 49, 50)
@@ -109,7 +110,7 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 <table >
     <header>
         <tr>
-            <th>desc \ fields</th><th>id</th><th>n1</th><th>n2</th><th>n3</th><th>n4</th><th>n5</th>
+            <th>desc \ fields</th><th>row_id</th><th>n1</th><th>n2</th><th>n3</th><th>n4</th><th>n5</th>
         </tr>
     </header>
     <body>
@@ -120,7 +121,41 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
             <th>constraints </th><td>Primary Key<br> unique <br>{ 1..2118760 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td><td>unique { n1..n5 }</td>
         </tr>
         <tr>
-            <th>desc </th><td>{ 1..2118760 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td><td>{ 1..50 }</td>
+            <th>desc </th><td>{ 1..2118760 }</td><td>{ 1..46 }</td><td>{ 2..47 }</td><td>{ 3..48 }</td><td>{ 4..49 }</td><td>{ 5..50 }</td>
+        </tr>
+    </body>
+</table>
+
+
+- **Attributes** - Furder describe an entity
+  - Entity ```en_row``` (API Entity Name: `EuroNumberRow`)
+    - unique{ en1 < en2 }
+    - each row is unique
+    - from (1, 2) to (11, 12)
+    - each row have unique `row_id`, as unique identification in relations with other entities
+
+
+<style>
+    table {
+        font-size: 12px;
+    }
+</style>
+
+<table >
+    <header>
+        <tr>
+            <th>desc \ fields</th><th>row_id</th><th>en1</th><th>en2</th>
+        </tr>
+    </header>
+    <body>
+         <tr>
+            <th>types </th><td>integer(2)</td><td>integer(2)</td><td>integer(2)</td>
+        </tr>
+        <tr>
+            <th>constraints </th><td>Primary Key<br> unique <br>{ 1..66 }</td><td>unique { en1..en2 }</td><td>unique { en1..en2 }</td>
+        </tr>
+        <tr>
+            <th>desc </th><td>{ 1..66 }</td><td>{ 1..11}</td><td>{ 2..12 }</td>
         </tr>
     </body>
 </table>
