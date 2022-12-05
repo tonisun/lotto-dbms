@@ -2,11 +2,11 @@
 ![Logo egosanto.de](assets/images/documentation/logo.png)
 <br><br>
 
-## Data Source for `ej_draw`
+## 1. Data Source for `ej_draw`
 [https://www.westlotto.de/service/downloads/downloads.html](https://www.westlotto.de/service/downloads/downloads.html)
 
 <br><br>
-## Data Description on `kaggle.com`
+## 2. Data Description on `kaggle.com`
 
 - Binomial coefficient
 
@@ -45,23 +45,15 @@ $$ \binom{50}{5} \cdot \binom{12}{2} = 2.118.760 \cdot 66 = 139.838.160$$
 $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 
 <br><br>
-## Data Models Development
+## 3. Data Models Development
+
+#### 3.1. EuroJackpot Entities
 
 - **Entities** - Represent real world object or concept
   - Euro Jackpot Draws ```{ data_base_name: "ej_draw", API_name: "EuroJackpotDraw" }```
   - All Euro Jackpot Rows ```{ data_base_name: "ej_row", API_name: "EuroJackpotRow" }```
   - All Euro Number Rows ```{ data_base_name: "en_row", API_name: "EuroNumberRow" }```
   <br>
-
-  - 6 from 49 Draws ```{ ... }```
-  - All 6 from 49 Rows ```{ ... }```
-  <br>
-  
-  - ... ```{ ... }```
-
-<br>
-
-
 
 - **Attributes** - Furder describe an entity
   - Entity ```ej_draw``` (API Entity Name: `EuroJackpotDraw`)
@@ -169,10 +161,25 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 
 ![Euro Jackpot DB](assets/images/documentation/er-diagram.drawio.svg)
 
-<br><br>
-## Data Definition for MySQL and PostgreSQL
+#### 3.2. 6 aus 49 Entities
 
-### Create Database `ej_lotto` on MySQL Server
+- **Entities** - Represent real world object or concept
+  - 6 from 49 Draws ```{ ... }```
+  - All 6 from 49 Rows ```{ ... }```
+  <br>
+  
+  - ... ```{ ... }```
+
+<br>
+
+
+
+
+
+<br><br>
+## 4. Data Definition for MySQL and PostgreSQL
+
+### 4.1. Create Database `ej_lotto` on MySQL Server
 
 With the same database name `ej_lotto`, user name `ej_lotto` and password `ej_lotto` on test server ;-)
 
@@ -275,7 +282,7 @@ END
 ```
 
 
-### Create Database `ej_lotto` on PostgreSQL Server
+### 4.2. Create Database `ej_lotto` on PostgreSQL Server
 
 With the same database name `ej_lotto`, user name `ej_lotto` and password `ej_lotto` on test server ;-)
 
