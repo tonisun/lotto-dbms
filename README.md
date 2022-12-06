@@ -47,7 +47,7 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 <br><br>
 ## 3. Data Models Development
 
-#### 3.1. EuroJackpot Entities
+### 3.1. EuroJackpot Entities
 
 - **Entities** - Represent real world object or concept
   - Euro Jackpot Draws ```{ data_base_name: "ej_draw", API_name: "EuroJackpotDraw" }```
@@ -161,7 +161,7 @@ $$ \binom{49}{6} \cdot \binom{10}{1} = 13.983.816  \cdot  10 = 139.838.160 $$
 
 ![Euro Jackpot DB](assets/images/documentation/er-diagram.drawio.svg)
 
-#### 3.2. 6 aus 49 Entities
+### 3.2. 6 aus 49 Entities
 
 - **Entities** - Represent real world object or concept
   - 6 from 49 Draws ```{ ... }```
