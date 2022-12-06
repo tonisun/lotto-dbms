@@ -333,6 +333,13 @@ CREATE TABLE IF NOT EXISTS public.ej_draw (
 
 ALTER TABLE IF EXISTS public.ej_draw OWNER to ej_lotto;
 
+COPY public.ej_draw(date, n1, n2, n3, n4, n5, en1, en2) 
+FROM 'F:\lotto.sql\EJ_2012_2021-euro.csv' 
+DELIMITER ';' 
+CSV HEADER;C
+
+
+
 
 
 -- Table: public.ej_row
